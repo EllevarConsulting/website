@@ -1,0 +1,31 @@
+@import "tailwindcss";
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
+:root {
+  --primary-color: #1e40af;
+  --primary-text-color: black;
+}
+
+:root[class~='dark'] {
+  --primary-color: #3b82f6;
+  --primary-text-color: #d1d5db;
+}
+
+@theme static {
+  --color-primary: var(--primary-color);
+  --color-text-primary: var(--primary-text-color);
+}
+
+.slick-dots {
+  bottom: 0px;
+}
+
+.slick-dots li {
+  border-radius: 50%;
+  background-color: white;
+}
+
+.slick-dots li.slick-active {
+  background-color: var(--primary-color);
+}
