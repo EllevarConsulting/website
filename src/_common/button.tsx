@@ -7,7 +7,7 @@ interface ButtonProps {
 export const Button = ({ children, onClick, className = "" }: ButtonProps) => {
   return (
     <button 
-      className={`p-3 rounded-md text-text-primary hover:bg-primary duration-200 cursor-pointer ${className}`}
+      className={`p-3 rounded-md text-text-primary duration-200 cursor-pointer ${className}`}
       onClick={onClick}
     >
       {children}

@@ -1,20 +1,39 @@
+@import url(https://db.onlinewebfonts.com/c/4a24899e94d8236f671c1090cd9e068c?family=Canela-Regular);
+@import url('https://fonts.cdnfonts.com/css/inter');
 @import "tailwindcss";
 @import "slick-carousel/slick/slick.css";
 @import "slick-carousel/slick/slick-theme.css";
 
 :root {
-  --primary-color: #1e40af;
-  --primary-text-color: black;
+  --primary-color: #191970;
+  --action-color: #E6A57E;
+  --base-color: #F7F5F2;
+  --secondary-tone: #A9A9B0;
+  --primary-text-color: #2C2C34;
 }
 
 :root[class~='dark'] {
   --primary-color: #3b82f6;
+  --action-color: #E6A57E;
+  --base-color: #1f2937;
+  --secondary-tone: #6b7280;
   --primary-text-color: #d1d5db;
 }
 
 @theme static {
   --color-primary: var(--primary-color);
   --color-text-primary: var(--primary-text-color);
+  --color-action: var(--action-color);
+  --color-base: var(--base-color);
+  --color-secondary: var(--secondary-tone);
+  --font-sans: "inter", sans-serif;
+  --text: var(--color-text-primary);
+  --font-sans--font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+}
+
+html {
+  @apply text-text-primary;
+  @apply bg-base;
 }
 
 .slick-dots {
@@ -27,5 +46,34 @@
 }
 
 .slick-dots li.slick-active {
-  background-color: var(--primary-color);
+  background-color: var(--action-color);
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  position: relative;
+  animation: rotate 1s linear infinite
+}
+.loader::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  inset: 0px;
+  border-radius: 50%;
+  border: 5px solid var(--action-color);
+  animation: prixClipFix 2s linear infinite ;
+}
+
+@keyframes rotate {
+  100%   {transform: rotate(360deg)}
+}
+
+@keyframes prixClipFix {
+    0%   {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
+    25%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
+    50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+    75%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 100%)}
+    100% {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 0)}
 }

@@ -45,9 +45,9 @@ const Contact = () => {
     console.log({ name, email, message });
   }, [name, email, message]);
 
-  return <div className="flex flex-col items-center text-center py-[52px] gap-8">
+  return <div className="flex flex-col items-center text-center py-[52px] gap-8 px-[52px]">
     <Header className="text-text-primary">Contact Us</Header>
-    <TextField 
+    <TextField
       label="Name"
       value={name} 
       onChange={(event) => {
@@ -60,7 +60,7 @@ const Contact = () => {
       helperText={nameError ? nameError.message : ""}
       className="max-w-[500px] w-full" 
     />
-    <TextField 
+    <TextField
       label="Email" 
       value={email} 
       error={!!emailError}
@@ -73,10 +73,10 @@ const Contact = () => {
       }} 
       className="max-w-[500px] w-full" 
     />
-    <TextField 
-      label="Message" 
-      multiline 
-      rows={4} 
+    <TextField
+      label="Message"
+      multiline
+      rows={4}
       error={!!messageError}
       helperText={messageError ? messageError.message : ""}
       className="max-w-[500px] w-full" 
@@ -88,7 +88,7 @@ const Contact = () => {
         }
       }} 
     />
-    <Button onClick={onSubmit} className="rounded-full">Submit</Button>
+    <Button onClick={onSubmit} className="rounded-full w-full max-w-[500px] bg-action text-primary">Submit</Button>
   </div>;
 };
 

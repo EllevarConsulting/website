@@ -4,5 +4,5 @@ interface HeaderProps {
 }
 
 export const Header = ({ children, className = "" }: HeaderProps) => {
-  return <h1 className={`text-4xl font-bold ${className}`}>{children}</h1>
+  return <h1 className={`text-5xl font-bold font-[Canela-Regular] ${className}`}>{children}</h1>
 }
