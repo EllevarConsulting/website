@@ -120,7 +120,7 @@ const Home = () => {
       className="w-full h-[calc(100vh-88px)]"
     >
       <Hero className="bg-[url(/images/hero1.jpg)]">
-        <Header className="text-black text-6xl">Ellevar</Header>
+        <Header className="text-black text-6xl">Ellevar Consulting</Header>
         <div className="flex flex-col text-black text-lg sm:gap-3 gap-8">
           <b>From the Latin “elevare” meaning “to elevate”</b> 
           <b>Our goal is to help bring our clients to the next level</b>
