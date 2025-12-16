@@ -126,7 +126,7 @@ const Home = () => {
           <b>Our goal is to help bring our clients to the next level</b>
         </div>
       </Hero>
-      <Hero className="bg-[url(/images/hero2.jpg)]">
+      <Hero className="bg-[url(/images/hero2.png)]">
         <Header className="text-black">What We do</Header>
         <div className="flex flex-col text-black text-lg sm:gap-3 gap-8 max-w-[500px]">
           <b className="text-black">
