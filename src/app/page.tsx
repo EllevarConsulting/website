@@ -119,14 +119,14 @@ const Home = () => {
       customPaging={customPaging}
       className="w-full h-[calc(100vh-88px)]"
     >
-      <Hero className="bg-[url(/images/hero1.jpg)]">
+      <Hero className="bg-[url(/images/hero1.png)]">
         <Header className="text-black text-6xl">Ellevar Consulting</Header>
         <div className="flex flex-col text-black text-lg sm:gap-3 gap-8">
           <b>From the Latin “elevare” meaning “to elevate”</b> 
           <b>Our goal is to help bring our clients to the next level</b>
         </div>
       </Hero>
-      <Hero className="bg-[url(/images/hero2.png)]">
+      <Hero className="bg-[url(/images/hero2.jpg)]">
         <Header className="text-black">What We do</Header>
         <div className="flex flex-col text-black text-lg sm:gap-3 gap-8 max-w-[500px]">
           <b className="text-black">
